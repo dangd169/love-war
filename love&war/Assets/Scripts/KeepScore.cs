@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class KeepScore : MonoBehaviour {
 
@@ -7,45 +8,92 @@ public class KeepScore : MonoBehaviour {
 	public static string[] phase2 = {"b","c","c","d"};
 	public static string truth = "b";
 
-	public int playerAscore = 0;
-	public int playerBscore = 0;
-	public int playerCscore = 0;
-	public int playerDscore = 0;
+	int playerAscore = 0;
+	int playerBscore = 0;
+	int playerCscore = 0;
+	int playerDscore = 0;
 
-	void Start () {	
-		//keeping score example
-		//if player a picks player b
-		//phase1[0] = "b";
+	Text playerA;
+	Text playerB;
+	Text playerC;
+	Text playerD;
 
+	public GameObject A;
+	public GameObject B;
+	public GameObject C;
+	public GameObject D;
+
+	public GameObject timer;
+
+	bool truthed;
+	bool voted;
+	bool blamed;
 	
-		// points for the truth
+	public static int truthSwitch = -18;
+	public static int blameSwitch = -15;
+	public static int voteSwitch = -12;
+
+
+	void Start (){
+
+		playerA = A.GetComponent<Text>();
+		playerB = B.GetComponent<Text>();
+		playerC = C.GetComponent<Text>();
+		playerD = D.GetComponent<Text>();
+
+		BlameCounter.blame = true;
+		timer.SendMessage ("blameTimer");
+	}
+
+	void Update(){
+
+		playerA.text = " " + playerAscore;
+		playerB.text = " " + playerBscore;
+		playerC.text = " " + playerCscore;
+		playerD.text = " " + playerDscore;
+
+		if(BlameCounter.blameTime == BlameCounter.timerStart){
+			truthed = false;
+			voted = false;
+			blamed = false;
+		}
+		if (!truthed && BlameCounter.blameTime  == truthSwitch){
+			Truth ();
+		}
+		if (!voted && BlameCounter.blameTime  == voteSwitch){
+			Voted ();
+		}
+		if (!blamed && BlameCounter.blameTime  == blameSwitch){
+			Blamed ();
+		}
+
+	}
+	
+
+	void Truth () {
 		if (phase2[0] == truth) playerAscore += 500;
 		if (phase2[1] == truth) playerBscore += 500;
 		if (phase2[2] == truth) playerCscore += 500;
 		if (phase2[3] == truth) playerDscore += 500;
-
-		print ("Truth PlayerA:" + playerAscore + " PlayerB:" + playerBscore + " PlayerC:" + playerCscore + " PlayerD:" + playerDscore);
-
-
-		// minus points for getting blamed
+		truthed = true;
+	}
+		
+	void Voted (){
 		playerAscore -= occurrences("a", phase2) * 250;
 		playerBscore -= occurrences("b", phase2) * 250;
 		playerCscore -= occurrences("c", phase2) * 250;
 		playerDscore -= occurrences("d", phase2) * 250;
-
-		print ("-Blame PlayerA:" + playerAscore + " PlayerB:" + playerBscore + " PlayerC:" + playerCscore + " PlayerD:" + playerDscore);
-
-
-		// plus points for changing minds
+		voted = true;
+	}
+		
+	void Blamed () {
 		playerAscore += occurrences(phase1[0], phase2) * 100;
 		playerBscore += occurrences(phase1[1], phase2) * 100;
 		playerCscore += occurrences(phase1[2], phase2) * 100;
 		playerDscore += occurrences(phase1[3], phase2) * 100;
-
-		print ("+Influence PlayerA:" + playerAscore + " PlayerB:" + playerBscore + " PlayerC:" + playerCscore + " PlayerD:" + playerDscore);
-
+		blamed = true;
 	}
-
+	
 	int occurrences(string item, string[] ary)
 	{
 		int count = 0;
@@ -56,5 +104,5 @@ public class KeepScore : MonoBehaviour {
 		}
 		return count;
 	}
-
+	
 }
