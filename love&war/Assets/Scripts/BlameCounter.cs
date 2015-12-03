@@ -4,12 +4,14 @@ using System.Collections;
 public class BlameCounter : MonoBehaviour {
 
 	static public bool blame = false;
-	static public int blameTime = 10;
-	public static int timerLength = -20;
-	public static int timerStart = 10;
+	static public int blameTime = 30;
+	public static int timerLength = -70;
+	public static int timerStart = 30;
+	public static int questionNumber = -1;
 
 	void Update (){
-		print (blameTime);
+		//print (blameTime);
+		//print (questionNumber);
 		if (blameTime == timerLength) {
 			CancelInvoke();
 			blameTimer();
@@ -20,6 +22,7 @@ public class BlameCounter : MonoBehaviour {
 		if (blame == true) {
 			blameTime = timerStart;
 			countdown();
+			questionNumber ++;
 			}
 		}
 	void countdown(){

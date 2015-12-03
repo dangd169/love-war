@@ -6,7 +6,7 @@ public class KeepScore : MonoBehaviour {
 
 	public static string[] phase1 = {"a","b","d","c"};
 	public static string[] phase2 = {"b","c","c","d"};
-	public static string truth = "b";
+	public static string truth;
 
 	int playerAscore = 0;
 	int playerBscore = 0;
@@ -29,9 +29,9 @@ public class KeepScore : MonoBehaviour {
 	bool voted;
 	bool blamed;
 	
-	public static int truthSwitch = -18;
-	public static int blameSwitch = -15;
-	public static int voteSwitch = -12;
+	public static int truthSwitch = -68;
+	public static int blameSwitch = -65;
+	public static int voteSwitch = -62;
 
 
 	void Start (){
@@ -47,16 +47,43 @@ public class KeepScore : MonoBehaviour {
 
 	void Update(){
 
+		if(BlameCounter.questionNumber == 0){
+			truth = "b";
+		}
+		if(BlameCounter.questionNumber == 1){
+			truth = "d";
+		}
+		if(BlameCounter.questionNumber == 2){
+			truth = "c";
+		}
+		if(BlameCounter.questionNumber == 3){
+			truth = "d";
+		}
+		if(BlameCounter.questionNumber == 4){
+			truth = "a";
+		}
+		if(BlameCounter.questionNumber == 5){
+			truth = "c";
+
+		}if(BlameCounter.questionNumber == 6){
+			truth = "b";
+		}
+		if(BlameCounter.questionNumber == 7){
+			truth = "a";
+		}
+
+
 		playerA.text = " " + playerAscore;
 		playerB.text = " " + playerBscore;
 		playerC.text = " " + playerCscore;
 		playerD.text = " " + playerDscore;
 
-		if(BlameCounter.blameTime == BlameCounter.timerStart){
+		if(BlameCounter.blameTime == BlameCounter.timerStart - 1){
 			truthed = false;
 			voted = false;
 			blamed = false;
 		}
+
 		if (!truthed && BlameCounter.blameTime  == truthSwitch){
 			Truth ();
 		}
@@ -76,6 +103,7 @@ public class KeepScore : MonoBehaviour {
 		if (phase2[2] == truth) playerCscore += 500;
 		if (phase2[3] == truth) playerDscore += 500;
 		truthed = true;
+		print ("this worked");
 	}
 		
 	void Voted (){

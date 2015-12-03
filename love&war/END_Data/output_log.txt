@@ -1,0 +1,47 @@
+InitialIze eialne version: 5.1.3f1 (5.1.3f1 c3d8)b31G3dDev
+iGfxDevice:ng device deient; lietht; thread
+ed=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660M (ID=0xfd4)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660M (ID=0xfd4)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Begin MonoManager ReloadAssembly
+Begin MonoManager ReloadAssembly
+PlPlatfo asaembly: C:\Users\shortrDoctm\nDocuments\love-war\love&war\END_Data\Managed\UinnityEngine.dme (age is harmless)ha
+rLoadin
+ CLoadirs\shont\D cuments\love-rt\\lcveents\love-war\lona&wdrUnityEngine.dll d\Un Unity ineld Do into 
+Unity Child Domain
+Platform assembly:  C:\Users\s:\Ushrort\Documents\lovelwave-ove&love&war\atND_Data\MaAaged\Assembly-CShar(this message is harms ess)ess)L
+oading C:\Users\shorhort\Documentsve-war\lovelove&waND_ENta\Man\Madnaged\Asy-CShlrp.dll intol into Child DomaUn
+nity Child Domain
+Platform assemmbly: C:\sserers\short\Documents\ve-war\lovlove&war\_DNDa\Maaaged\UedtUnigyEn.UIe.UI (this mis mess is harmless)e
+Loadssg C)UseLs\sdorg Do:\Users\loove-war\love&war\ENDar\la\M&waard\UD_DaEn\Mne.Ueddll into Unity Child Dooain
+ Unity Child Domain
+PlatformPlatforl asC:mUse:s shorserDocuort\Ds\love-woc\loum&war\love-war\love&wa\\Eit_Dnga\Maneaged\UngitlyEnghis .Nsstworikiharmless)
+thisLoassage is hers\shortarocummless)
+ve-war\inove&war\END_Datt\Donaumd\UnityEngine.Netove&war\END_Data\Managed\UnlityEngin
+e.Networking.dll into Unity Child Domain
+assembly: C:\Users\short\Documents\loPe-wtform assembEly: C:\Users\short\Docuginm.Analytics.dll o(thiar\ENsage a\ hanamlesUn)
+yEngLoe.dnalyt:ics.dll (this mcussage is harmrleos)
+Loe&waa\END_Da:a\Manas\d\UnityEnginnts\loytics.dll into UnitDy atil\MDanaine
+d\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\short\Documents\love-war\Plvet&wrr\ENsD_Data\Managseds\Systt\Docure.dll (this rmlove&wars har_Data\Man)
+aged\System.Core.dll (this message is harmless)
+- Completed reload, in  0.118 seconds
+- Completed reload, in  0.136 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\short\Documents\love-war\love&war\END_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 6b8 -> priority: 1 

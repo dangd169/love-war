@@ -16,8 +16,7 @@ public class Blame : MonoBehaviour {
 
 		if(other.CompareTag("BLAMEA")){
 				KeepScore.phase1[0] = "a";
-				GetComponent<SpriteRenderer>().enabled = false;
-				A.enabled = true;
+					A.enabled = true;
 					B.enabled = false;
 					C.enabled = false;
 					D.enabled = false;
@@ -25,7 +24,6 @@ public class Blame : MonoBehaviour {
 
 		if(other.CompareTag("BLAMEB")){
 				KeepScore.phase1[0] = "b";
-				GetComponent<SpriteRenderer>().enabled = false;
 				B.enabled = true;
 					A.enabled = false;
 					C.enabled = false;
@@ -34,7 +32,6 @@ public class Blame : MonoBehaviour {
 
 		if(other.CompareTag("BLAMEC")){
 				KeepScore.phase1[0] = "c";
-				GetComponent<SpriteRenderer>().enabled = false;
 				C.enabled = true;
 					B.enabled = false;
 					A.enabled = false;
@@ -43,7 +40,6 @@ public class Blame : MonoBehaviour {
 
 		if(other.CompareTag("BLAMED")){
 				KeepScore.phase1[0] = "d";
-				GetComponent<SpriteRenderer>().enabled = false;
 				D.enabled = true;
 					B.enabled = false;
 					C.enabled = false;
@@ -52,18 +48,34 @@ public class Blame : MonoBehaviour {
 
 		if(other.CompareTag("VOTEA")){
 				KeepScore.phase2[0] = "a";
+					A.enabled = true;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = false;
 		}
 
 		if(other.CompareTag("VOTEB")){
 				KeepScore.phase2[0] = "b";
+					A.enabled = false;
+					B.enabled = true;
+					C.enabled = false;
+					D.enabled = false;
 		}
 
 		if(other.CompareTag("VOTEC")){
 				KeepScore.phase2[0] = "c";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = true;
+					D.enabled = false;
 		}
 
 		if(other.CompareTag("VOTED")){
 				KeepScore.phase2[0] = "d";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = true;
 		}
 		}
 		}
@@ -73,7 +85,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEA")){
 					KeepScore.phase1[1] = "a";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = true;
 					B.enabled = false;
 					C.enabled = false;
@@ -82,7 +93,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEB")){
 					KeepScore.phase1[1] = "b";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = true;
 					C.enabled = false;
@@ -91,7 +101,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEC")){
 					KeepScore.phase1[1] = "c";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = false;
 					C.enabled = true;
@@ -100,7 +109,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMED")){
 					KeepScore.phase1[1] = "d";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = false;
 					C.enabled = false;
@@ -109,18 +117,34 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("VOTEA")){
 					KeepScore.phase2[1] = "a";
+					A.enabled = true;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTEB")){
 					KeepScore.phase2[1] = "b";
+					A.enabled = false;
+					B.enabled = true;
+					C.enabled = false;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTEC")){
 					KeepScore.phase2[1] = "c";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = true;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTED")){
 					KeepScore.phase2[1] = "d";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = true;
 				}
 			}
 		}
@@ -130,7 +154,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEA")){
 					KeepScore.phase1[2] = "a";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = true;
 					B.enabled = false;
 					C.enabled = false;
@@ -139,7 +162,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEB")){
 					KeepScore.phase1[2] = "b";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = true;
 					C.enabled = false;
@@ -148,7 +170,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEC")){
 					KeepScore.phase1[2] = "c";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = false;
 					C.enabled = true;
@@ -157,7 +178,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMED")){
 					KeepScore.phase1[2] = "d";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = false;
 					C.enabled = false;
@@ -166,18 +186,34 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("VOTEA")){
 					KeepScore.phase2[2] = "a";
+					A.enabled = true;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTEB")){
 					KeepScore.phase2[2] = "b";
+					A.enabled = false;
+					B.enabled = true;
+					C.enabled = false;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTEC")){
 					KeepScore.phase2[2] = "c";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = true;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTED")){
 					KeepScore.phase2[2] = "d";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = true;
 				}
 			}
 		}
@@ -187,7 +223,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEA")){
 					KeepScore.phase1[3] = "a";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = true;
 					B.enabled = false;
 					C.enabled = false;
@@ -196,7 +231,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEB")){
 					KeepScore.phase1[3] = "b";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = true;
 					C.enabled = false;
@@ -205,7 +239,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMEC")){
 					KeepScore.phase1[3] = "c";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = false;
 					C.enabled = true;
@@ -214,7 +247,6 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("BLAMED")){
 					KeepScore.phase1[3] = "d";
-					GetComponent<SpriteRenderer>().enabled = false;
 					A.enabled = false;
 					B.enabled = false;
 					C.enabled = false;
@@ -223,18 +255,34 @@ public class Blame : MonoBehaviour {
 				
 				if(other.CompareTag("VOTEA")){
 					KeepScore.phase2[3] = "a";
+					A.enabled = true;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTEB")){
 					KeepScore.phase2[3] = "b";
+					A.enabled = false;
+					B.enabled = true;
+					C.enabled = false;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTEC")){
 					KeepScore.phase2[3] = "c";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = true;
+					D.enabled = false;
 				}
 				
 				if(other.CompareTag("VOTED")){
 					KeepScore.phase2[3] = "d";
+					A.enabled = false;
+					B.enabled = false;
+					C.enabled = false;
+					D.enabled = true;
 				}
 			}
 		}
